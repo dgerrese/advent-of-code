@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -70,5 +71,5 @@ func main() {
 		}
 	}
 
-	log.Printf("Total safe reports: %d", safeReports)
+	fmt.Printf("Total safe reports: %d", safeReports)
 }
