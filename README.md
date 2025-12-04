@@ -1,4 +1,8 @@
-# Advent of code
+# Advent of Code
 
-Solutions for advent of code 2024
+https://adventofcode.com/
 
+My solutions for Advent of Code.
+
+- [2024](2024/README.md)
+- [2025](2025/README.md)

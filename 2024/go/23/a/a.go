@@ -1,15 +1,14 @@
-package main
+package a
 
 import (
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 	"sort"
 	"strings"
 )
 
-func main() {
+func SolvePartA() int {
 	file, err := os.Open("./input")
 
 	if err != nil {
@@ -77,5 +76,5 @@ func main() {
 		}
 	}
 
-	fmt.Printf("Total sets of interconnected computers: %d\n", len(groups))
+	return len(groups)
 }

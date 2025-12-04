@@ -1,17 +1,14 @@
-package main
+package b
 
 import (
 	"bufio"
-	"fmt"
 	"log"
-	"math"
 	"os"
-	"slices"
 	"strconv"
 	"strings"
 )
 
-func main() {
+func SolvePartB() int {
 	file, err := os.Open("./input")
 	left := make([]int, 0)
 	right := make([]int, 0)
@@ -49,13 +46,17 @@ func main() {
 		log.Fatal(err)
 	}
 
-	slices.Sort(left)
-	slices.Sort(right)
-
-	diff := 0
+	similarity := 0
 	for i := 0; i < len(left); i++ {
-		diff += int(math.Abs(float64(left[i]) - float64(right[i])))
+		number := left[i]
+		occurences := 0
+		for j := 0; j < len(right); j++ {
+			if number == right[j] {
+				occurences++
+			}
+		}
+		similarity += number * occurences
 	}
 
-	fmt.Printf("Total difference: %d\n", diff)
+	return similarity
 }

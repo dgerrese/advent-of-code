@@ -1,15 +1,16 @@
-package main
+package a
 
 import (
 	"bufio"
-	"fmt"
 	"log"
+	"math"
 	"os"
+	"slices"
 	"strconv"
 	"strings"
 )
 
-func main() {
+func SolvePartA() int {
 	file, err := os.Open("./input")
 	left := make([]int, 0)
 	right := make([]int, 0)
@@ -47,17 +48,13 @@ func main() {
 		log.Fatal(err)
 	}
 
-	similarity := 0
+	slices.Sort(left)
+	slices.Sort(right)
+
+	diff := 0
 	for i := 0; i < len(left); i++ {
-		number := left[i]
-		occurences := 0
-		for j := 0; j < len(right); j++ {
-			if number == right[j] {
-				occurences++
-			}
-		}
-		similarity += number * occurences
+		diff += int(math.Abs(float64(left[i]) - float64(right[i])))
 	}
 
-	fmt.Printf("Similarity score: %d\n", similarity)
+	return diff
 }

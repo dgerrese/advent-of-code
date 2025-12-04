@@ -1,15 +1,14 @@
-package main
+package a
 
 import (
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 	"strconv"
 	"strings"
 )
 
-func main() {
+func SolvePartA() int {
 	file, err := os.Open("./input")
 
 	if err != nil {
@@ -71,5 +70,5 @@ func main() {
 		}
 	}
 
-	fmt.Printf("Total safe reports: %d", safeReports)
+	return safeReports
 }

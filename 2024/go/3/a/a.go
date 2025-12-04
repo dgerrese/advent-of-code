@@ -1,15 +1,14 @@
-package main
+package a
 
 import (
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 	"regexp"
 	"strconv"
 )
 
-func main() {
+func SolvePartA() int {
 	file, err := os.Open("./input")
 
 	if err != nil {
@@ -41,5 +40,5 @@ func main() {
 		}
 	}
 
-	fmt.Printf("Sum: %d\n", sum)
+	return sum
 }

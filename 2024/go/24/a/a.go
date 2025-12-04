@@ -1,8 +1,7 @@
-package main
+package a
 
 import (
 	"bufio"
-	"fmt"
 	"log"
 	"os"
 	"slices"
@@ -18,7 +17,7 @@ type Statement struct {
 	out   string
 }
 
-func main() {
+func SolvePartA() int64 {
 	file, err := os.Open("./input")
 
 	if err != nil {
@@ -76,7 +75,8 @@ func main() {
 	}
 
 	output, _ := strconv.ParseInt(binaryOutput, 2, 64)
-	fmt.Printf("Output for wires starting with z: %v\n", output)
+
+	return output
 }
 
 func findStatementValue(inputs map[string]int, statements []Statement, statement Statement) int {
