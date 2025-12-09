@@ -1,8 +1,8 @@
-package day1
+package day2
 
 import (
-	"aoc2025/1/a"
-	"aoc2025/1/b"
+	"aoc2025/2/a"
+	"aoc2025/2/b"
 	_ "embed"
 	"fmt"
 )
@@ -14,8 +14,8 @@ var (
 
 func Solve() {
 	sa := a.Solve(input)
-	ba := b.Solve(input)
+	sb := b.Solve(input)
 
 	fmt.Printf("A:\t%d\n", sa)
-	fmt.Printf("B:\t%d\n", ba)
+	fmt.Printf("B:\t%d\n", sb)
 }
